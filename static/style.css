@@ -1,0 +1,14 @@
+h1 {
+	color: red;
+	/* margin-top: 400px; */
+}
+p {
+	color: blue;
+}
+.card {
+	margin-top: 50px;
+	background-color: red;
+	color: #fff;
+	padding: 10px;
+	border: 10px;
+}

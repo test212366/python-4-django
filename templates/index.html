@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}" >
+</head>
+<body>
+	{% if user.is_authenticated %}
+		<p>{{user.username}}</p>
+		<a href="logout">logout</a>
+	{% endif %}
+	<h1>12312312312
+
+		{{name}}
+		{{age}}
+		{{nationality}}
+
+	</h1>
+	<form method="POST" action="counter">
+		{% csrf_token %}
+		<textarea name="words" id="" cols="30" rows="10">
+
+		</textarea>
+		<input type="submit">
+
+
+	</form>
+	<div class="card">
+		<p>{{feature.id}}</p>
+		<p>{{feature.name}}</p>
+		<p>{{feature.details}}</p>
+
+	</div>
+
+	{% for feature in features %}
+		<div class="card">
+			<p>{{feature.id}}</p>
+			<p>{{feature.name}}</p>
+			<p>{{feature.details}}</p>
+			{% if feature.is_true == True %}
+				<p>this true</p>
+			
+			{% else %}
+				<p>this false</p>
+			 
+			{% endif%}
+		</div>
+
+	{% endfor %}
+
+
+	{% for testfrombditem in testfrombd %}
+
+		<div class="card">
+			<p>{{testfrombditem.id}}</p>
+			<p>{{testfrombditem.name}}</p>
+			<p>{{testfrombditem.details}}</p>
+		
+		</div>
+	{% endfor %}
+
+
+</body>
+</html>

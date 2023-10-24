@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>counter</h1>
+
+	<p>{{words}}</p>
+	<p>{{amount_words}}</p>	
+	{% for post in posts %}
+
+		<a href="{% url 'post' post %}"><h1>meow</h1></a> 
+
+	{% endfor %}
+
+</body>
+</html>
